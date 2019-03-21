@@ -25,11 +25,11 @@ class _AnimatePageState extends State<AnimatePage> with SingleTickerProviderStat
         Navigator.of(context).pushAndRemoveUntil(
             MaterialPageRoute(builder: (context) {
           return IndexPage();
-        }), (route) => route == null); //动画结束是删掉这个路由 不然很费性能
+        }), (route) => route == null); // 动画结束是删掉这个路由 不然很费性能
       }
     });
 
-    _controller.forward();
+    _controller.forward(); // 开始动画
   }
 
   @override
